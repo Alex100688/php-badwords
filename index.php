@@ -2,7 +2,7 @@
     $text = "Ciao a tutti la mia password è testo";
     //echo strlen($text);
     $number_text = strlen($text);
-    $text2 = $_GET["text"];
+    $text = $_GET["text"];
     $text2 = str_replace("testo", "***", $text );
     $number_text2 = strlen($text2);
 ?>
