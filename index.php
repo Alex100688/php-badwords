@@ -2,7 +2,7 @@
     $text = "Ciao a tutti, la mia password è: testo";
     //echo strlen($text);
     $number_text = strlen($text);
-    $text2 = $_GET["text"];
+    $text2 = isset($_GET["text"]) ? $_GET["text"] : "";
     $text2 = "Ciao a tutti la mia password è: ".str_replace ("testo", "***", $text2 );
     $number_text2 = strlen($text2);
 ?>
@@ -15,9 +15,9 @@
     <title>php-badwords</title>
 </head>
 <body>
-    <h1><?php echo $text ?> </h1>
-    <h2><?php echo $number_text ?></h2>
-    <h3><?php echo $text2 ?></h3>
-    <h3><?php echo $number_text2 ?></h3>
+    <h1><?php echo $text; ?> </h1>
+    <h2><?php echo $number_text; ?></h2>
+    <h3><?php echo $text2; ?></h3>
+    <h3><?php echo $number_text2; ?></h3>
 </body>
 </html>
